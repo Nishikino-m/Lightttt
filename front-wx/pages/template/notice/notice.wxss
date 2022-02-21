@@ -1,0 +1,44 @@
+/* pages/template/goods/good.wxss */
+.template_style{
+    font-size: 30rpx;
+    color: #ff0000;
+  }
+  .info{
+    font-size: 30rpx;
+    color: #ff0000;
+  }
+  
+  .notice{
+    border-style: groove;
+    border: solid 1px white;
+    height:270rpx; 
+    width: 300rpx;
+    padding: 5rpx;
+    margin-bottom: 15px;
+    margin-left: 3px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255);
+
+
+  }
+  .notice2{
+    border-style: groove;
+    border: solid 1px white;
+    height:590rpx; 
+    width: 300rpx;
+    padding: 5rpx;
+    margin-bottom: 15px;
+    margin-left: 3px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255);
+   
+  }
+  text{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }

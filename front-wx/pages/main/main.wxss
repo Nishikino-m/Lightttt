@@ -1,0 +1,57 @@
+/* pages/main/main.wxss */
+/*轮播*/
+
+/**index.wxss**/
+@import "../template/goods/good.wxss";
+page{
+  background-color:rgba(235,235,235) ;
+}
+.page {
+  margin-top: 30rpx;
+}
+.mpage {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.all{
+  width: 100rpx;
+  height: 100rpx;
+  z-index: 10;
+  position: fixed;
+}
+.page .swiperClass {margin: 0;margin-top: 10px;}
+.page .slide-image {width: 100%;height: 80%;border-radius: 10px;position: relative;box-shadow: 0 0 10rpx rgba(0, 0, 0, .8)}
+.page image.active {transform: none;transition: all 1.0s ease-in 0s;}
+.page image.quiet { transform: scale(0.8333333);transition-duration: 1.0s ease-in 0s;}
+/* 加号 */
+.adder_circle{
+  width: 150rpx;
+  height: 150rpx;
+  border: 0 solid #ffffff;
+  border-radius: 500px;
+  box-shadow: 4px 1px 1px #cccccc;
+  display: flex;
+  margin-left: 80%;
+}
+.image{
+  top: 20rpx;
+  display: flex;
+  width: 100rpx;
+  height: 100rpx;
+}
+/* 调整瀑布流位置 */
+#left{
+  width: 330rpx;
+  float: left;
+  margin-left:15rpx;
+}
+#right{
+  width: 330rpx;
+  float: right;
+  margin-right: 35rpx;
+}
+.fabu{
+  margin-left: 25vmax;
+
+}

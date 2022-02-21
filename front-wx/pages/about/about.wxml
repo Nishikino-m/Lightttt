@@ -1,0 +1,8 @@
+<!--pages/about/about.wxml-->
+
+<view class="container ct">
+<p style="font-size: 45rpx;">本项目由人机交互课程第13小组设计并开发，小组成员有：沈博宇、诸雨婷、林煊、缪思奇。</p>
+<p>本项目是为了让寻物信息能够更加....</p>
+
+<text>项目的说明书详见：</text>
+</view>

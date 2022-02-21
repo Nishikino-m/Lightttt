@@ -1,0 +1,23 @@
+<!--pages/template/goods/good.wxml-->
+<template name="notice" >
+<view wx:if="{{!item.pic}}" class="notice">
+    <view class="text-box" >
+        <view class="fs14 num2" style="height:60rpx;font-size: 25px;margin-top: 5px;font-weight:700;margin-left: 10px;text-overflow: ellipsis;">{{item.title}}</view>
+        <view class="ai" style="padding:6rpx 0;">
+            <view style="color:black;padding:5px;font-size: 14px;"><i class="fs10"></i><text>{{ item.details || ' ' }}</text></view>
+        </view>
+    </view>
+</view>
+<view wx:if="{{item.pic}}" class="notice2">
+    <view  style=" height:345rpx; width: 250rpx; ">
+          <image class="imgLoad" mode="aspectFill" style="height:345rpx; width: 300rpx;" src="{{ item.pic ? item.pic : '' }}" lazy-load="true" alt=""></image>
+  </view>
+    <view class="text-box" >
+        <view class="fs14 num2" style="height:60rpx;font-size: 24px;margin-top: 5px;font-weight:700;margin-left: 10px;text-overflow: ellipsis;">{{item.title}}</view>
+        <view class="ai" style="padding:6rpx 0;">
+            <view style="color:black;font-size: 16px;padding:5px;"><i class="fs10"></i><text>{{ item.details || '' }}</text></view>
+        </view>
+    </view>
+</view>
+
+</template>

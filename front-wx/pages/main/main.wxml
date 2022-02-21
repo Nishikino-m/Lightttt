@@ -1,0 +1,57 @@
+<!--pages/main/main.wxml-->
+<import src ="../template/goods/good.wxml"/>
+
+<view class='pageBox page' >
+  <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots  interval="4000" duration="1000" previous-margin="60px" next-margin="60px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image {{swiperIdx == index ? 'active' : 'quiet'}}" mode='aspectFill'></image>
+    </swiper-item>
+  </block>
+ </swiper>
+
+<view bindtap="toFabu" style=" top: 1140rpx; right:40rpx;position:fixed">
+  <image style="width: 130rpx; height: 130rpx;  box-sizing: border-box" src="/images/me_selected2.png" mode="scaleToFill"></image>
+
+
+</view>
+<view >
+<!-- 这里需要一个分割线一样的模块 -->
+
+<block >
+
+  <view id="left"  >
+  <!-- bindtap="toContent{{item.id}} -->
+    <view class="list-index list-index-{{plType}}" wx:for="{{ leftList }}" wx:key="key"  >
+    <!--点击跳转ver 那就需要自动生成page了 或许是template然后通过id关联具体的图片和描述-->
+    <view catchtap="toDetail" data-detail="{{item}}">
+          <template  data="{{ item }}" is="good"/>
+          </view>
+    </view>
+  </view>
+  
+  <view id="right">
+    <view class="list-index list-index-{{plType}}" wx:for="{{ rightList }}" wx:key="key" >
+      <!-- <navigator url="/pages/detail/detail?id={{item.id}}&price={{item.originalPrice}}&title={{item.title}}&username={{item.username}}&imageList={{item.imageList}}&lxfs={{item.lxfs}}&details={{item.details}}" hover-class="none"> -->
+      <view catchtap="toDetail" data-detail="{{item}}">
+          <template  data="{{ item }}" is="good"/>
+          </view>
+      <!-- </navigator>  -->
+    </view>
+  </view>
+</block>
+<!--使用templa e-->
+
+</view>
+
+
+
+</view>
+
+
+<view style="width: 750rpx; height: 80vmax; display: block; box-sizing: border-box;">
+  
+</view>
+
+
+<text style="width: 100vw;display:flex;align-items:center;justify-content:center;">——没有更多内容了——</text>

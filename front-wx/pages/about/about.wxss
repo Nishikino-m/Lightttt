@@ -1,0 +1,9 @@
+/* pages/about/about.wxss */
+.ct{
+  margin: 30rpx;
+  background-color:  rgb(110, 79, 198);
+  color: aliceblue;
+  font-size: 40rpx;
+  padding: 15rpx;
+  border-radius: 10rpx;
+}

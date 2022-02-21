@@ -1,0 +1,44 @@
+<!--pages/detail/detail.wxml-->
+<view class='containe'>
+<view class='card1'>
+<view class="user">{{firstN}}</view>
+<text style="margin-top: 10rpx;font-size: 30rpx;">USER:{{username}}</text>
+</view>
+
+<view class='title'>
+<text >{{title}}</text>
+
+</view>
+<view class="divLine"></view>
+<view class="details">
+<text>{{details}}\n</text>
+</view>
+<view class="divLine"></view>
+<view class="infoo">
+<text style="color: grey;" decode="{{true}}">心理价位&emsp;&emsp;&emsp;</text><text style="color: rgb(39, 33, 33); font-weight: 600;">{{price}}\n</text>
+<text style="color: grey;" decode="{{true}}">联系方式&emsp;&emsp;&emsp;</text><text style="color: rgb(39, 33, 33); font-weight: 600;">{{lxfs}}\n</text>
+</view>
+<view class="divLine"></view>
+<view>
+
+<block wx:for="{{imageList}}">
+  <image style="margin:10rpx 10rpx;width: 700rpx; " mode="widthFix" wx:if="item" src='{{item}}' 	lazy-load="true"></image>
+
+</block>
+</view>
+<view style="width: 100vw;height: 120rpx;"></view>
+<view style="width: 100vw;height: 120rpx;position:fixed;bottom: 0;background-color: #fff;">
+  <view class="animal_collect" bindtap="handleCollect">
+      <block wx:if="{{isShow==false}}">
+
+      <image    src="/images/community.jpg" style="width: 70rpx; height:70rpx;  box-sizing: border-box; " mode="scaleToFill"></image>
+      </block>
+      <block wx:if="{{isShow==true}}" >
+      
+        <image   src="/images/community_selected.png" style="width: 70rpx; height:70rpx;  box-sizing: border-box; " mode="scaleToFill"  ></image>
+      </block>
+        <view class="collect_text">收藏</view>
+    </view>
+</view>
+    
+</view>

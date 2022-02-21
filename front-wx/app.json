@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/index/index",
+    "pages/fabu2/fabu2",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/fabu/fabu",
+    "pages/about/about",
+    "pages/feedback/feedback",
+    "pages/detail/detail",
+    "pages/lossDetail/lossDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#6e4fc6",
+    "navigationBarTitleText": "校园二手&寻物信息发布平台",
+    "navigationBarTextStyle": "white"
+  },
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#555555",
+    "selectedColor": "#5d2999",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "custom": false,
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "二手交易",
+        "iconPath": "/images/community.jpg",
+        "selectedIconPath": "/images/community_selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "寻物信息",
+        "iconPath": "/images/message.png",
+        "selectedIconPath": "/images/message_selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/me.png",
+        "selectedIconPath": "/images/me_selected.png"
+      }
+    ]
+  }
+}

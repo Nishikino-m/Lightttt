@@ -1,0 +1,56 @@
+
+  <template name="list">
+    <view class="list" hover-class="none" data-tip="{{tip}}" data-url="{{url}}" >
+        <view class="list-icon-wrap"><image src="{{icon}}" class="list-icon"></image></view>
+        <view class="list-text">{{text}}</view>
+        <view class="arrow-wrap">{{tip}}<image src="images/accessory.png" class="list-arrow"></image></view>
+    </view>
+    <view hidden="{{!cut?true:false}}" style="height: 23.44rpx;"></view>
+</template>
+
+<scroll-view scroll-y="trues" class="user">
+    <view class="info" style="width: 750rpx; height: 400rpx; display: block; box-sizing: border-box; background: url('images/bg.png');">
+      <view class="userinfo">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+      </view>
+       
+    </view>
+    <template is="list" data="{{...order}}"></template>
+    <view class="order">
+        <block wx:for="{{orderCell}}">
+            <navigator hover-class="none" url="{{item.url}}" class="order-cell">
+                <image class="{{item.class}}" src="{{item.icon}}"></image>
+                <view class="badge" wx:if="{{ item.count > 0 }}">{{item.count}}</view>
+                <view>{{item.text}}</view>
+            </navigator>
+        </block>
+    </view>
+    
+    <view style="margin: 10rpx 0 0 0;font-weight: 700; height: 100rpx;" aria-role="button" >
+      <button  style="width: 100vw; height: 100rpx;"  open-type="contact">联系客服</button>
+
+    </view>
+    <view style="margin:10rpx 0 0 0;font-weight: 700; height: 100rpx;" aria-role="button" >
+      <button bindtap="toAbout" style="width: 100vw; height: 100rpx;">关于平台</button>
+
+    </view>
+    <view style="margin:10rpx 0 0 0;font-weight: 700; height: 100rpx;" aria-role="button" >
+      <button bindtap="toFeedBack" style=" width: 100vw; height: 100rpx;">意见反馈</button>
+
+    </view>
+
+</scroll-view>
+
+    <view aria-role="dialog" aria-modal="true" class="fadeIn" wx:if="{{isAbout}}">
+        <view class="weui-mask"></view>
+        <view class="weui-dialog">
+            <view class="weui-dialog__bd">  此微信小程序基于人机交互课程开发。开发人员为第13小组，包括缪思奇，沈博宇，林煊，诸雨婷。想要了解更多有关此微信小程序，请见详情报告书。
+           </view>
+            <view class="weui-dialog__ft">
+                <view aria-role="button" class="weui-dialog__btn weui-dialog__btn_primary" bindtap="close">知道了</view>
+            </view>
+        </view>
+    </view>

@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<import src ="../template/notice/notice.wxml"/>
+<view class="container" >
+<!-- swiper组件-->
+  <view class="page-section page-section-spacing swiper" >
+      <swiper
+        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}" style="position: relative; left: -6rpx; top: 4rpx"></view>
+          </swiper-item>
+        </block>
+      </swiper>
+      
+    </view>
+
+<view bindtap="toFabu2"style=" top: 1140rpx; right:40rpx;position:fixed" >
+  <image style="width: 130rpx; height: 130rpx;  box-sizing: border-box; display: float;" src="/images/me_selected2.png" mode="scaleToFill"></image>
+
+  
+</view>   
+<view style="margin-top: 70rpx;">
+<!-- 这里需要一个分割线一样的模块 -->
+
+<block >
+
+  <view id="left"  >
+    <view class="list-index list-index-{{plType}}" wx:for="{{ leftList }}" wx:key="key" >
+    <!--点击跳转ver 那就需要自动生成page了 或许是template然后通过id关联具体的图片和描述-->
+       <!-- <navigator url="/pages/Main/pages/details/index?id={{item.id}}" hover-class="none">
+          <template data="{{ item }}" is="good"/>
+      </navigator>  -->
+       <view catchtap="toDetail" data-detail="{{item}}">
+      <template data="{{ item }}" is="notice" ></template>
+      </view>
+    </view>
+  </view>
+
+<view id="right">
+    <view class="list-index list-index-{{plType}}" wx:for="{{ rightList }}" wx:key="key">
+      <!-- <navigator url="/pages/Main/pages/details/index?id={{item.id}}" hover-class="none">
+          <template data="{{ item }}" is="good"/>
+      </navigator> -->
+      <view catchtap="toDetail" data-detail="{{item}}">
+      <template data="{{ item }}" is="notice"></template>
+      </view>
+    </view>
+  </view>
+</block>
+<!--使用templa e-->
+</view>
+<!--一些不需要的放到main.wxml了-->
+
+<text style="width: 100vw;display:flex;align-items:center;justify-content:center;">——没有更多内容了——</text>
+</view>
